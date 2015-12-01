@@ -1,0 +1,60 @@
+body {
+  background-color: gray;
+  text-align: center;
+}
+
+header {
+  margin-top: 10px;
+}
+
+.menu {
+  float: left;
+  border: 2px black dashed;
+  margin: 3px;
+  text-align: left;
+  padding-right: 100px;
+  line-height: 0;
+}
+
+.menu h4 {
+  text-decoration: underline;
+  padding-bottom: 20px;
+}
+
+.menu ul {
+  padding-left: 25px;
+  font-size: 25px;
+  padding-bottom: 50px;
+}
+
+.menu p {
+  color: purple;
+  text-decoration: underline;
+}
+
+.photo {
+  height: 200px;
+  padding-bottom: 70px;
+}
+
+.about {
+  float: left;
+  border-right: 3px solid black;
+  padding-left: 70px;
+  padding-right: 70px;
+  font-size: 20px;
+}
+
+.about h1 {
+  text-decoration: underline;
+}
+
+.hours {
+  float: left;
+  padding-left: 70px;
+  font-size: 20px;
+}
+
+.hours h1 {
+  text-decoration: underline; 
+}

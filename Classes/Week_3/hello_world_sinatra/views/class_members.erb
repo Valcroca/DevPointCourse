@@ -1,0 +1,13 @@
+<h1>Class Members</h1>
+<br />
+
+<% if @class_members.any? %>
+  <ul>
+    <% @class_members.each do |cm| %>
+      <li><a href=<%= "/class_member/#{cm}" %>><%= cm %></a></li>
+    <% end %>
+  </ul>
+<% else %>
+  <h3>No Class Members Found</h3>
+<% end %>
+<a href="/">Home</a>

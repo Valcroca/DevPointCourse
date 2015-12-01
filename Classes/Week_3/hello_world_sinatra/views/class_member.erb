@@ -1,0 +1,17 @@
+<h3>Info about <%= @name %></h3>
+<hr />
+
+<% if @age && @city_of_birth %>
+<h3>Info about <%= @name %></h3>
+  <hr />
+    <label>Age:</label>
+    <span><%= @age %></span>
+    <br />
+    <label>City of Birth:</label>
+    <span><%= @city_of_birth %></span>
+<% else %>
+    <h3>No User Found</h3>
+<% end %>
+<br />
+<a href="/class_member_search">Search Again</a>
+<a href="/">Home</a>

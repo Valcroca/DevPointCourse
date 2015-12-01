@@ -1,0 +1,118 @@
+
+header {
+  width: 100%;
+}
+
+header h1 {
+  text-align: center;
+  border-bottom: 2px solid silver;
+  margin-bottom: 0px;
+  padding-bottom: 20px;
+}
+
+.blue_boxes {
+  text-align: center;
+  border: 1px solid blue;
+  background-color: #CEECF5;
+  width: 33.17%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.div_left {
+  float: left;
+}
+
+.div_center {
+  float: left;
+}
+
+.div_right {
+  float: right;
+}
+
+table {
+  background-color: silver;
+  border: 1px solid black;
+  text-align: center;
+  width: 90%;
+  margin-left: 65px;
+  margin-top: 50px;
+}
+
+td {
+  border: 1px solid black;
+}
+
+th {
+  border: 1px solid black;
+}
+
+dl {
+  width: 45%;
+  padding: 30px;
+  margin-bottom: 0px;
+}
+
+dt {
+  text-align: center;
+  font-weight: bold;
+}
+
+.left_list {
+  float: left;
+}
+
+.right_list {
+  float: left;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+footer {
+  max-height: 400px;
+  width: 100%;
+  /*border-top: 2px solid silver;*/
+  padding-left: 90px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+
+.circle {
+  margin-right: 70px;
+  margin-left: 70px;
+  float: left;
+  border: 1px solid blue;
+  height : 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: green;
+}
+
+.square {
+  margin-right: 70px;
+  margin-left: 70px;
+  float: left;
+  border: 1px solid blue;
+  height : 200px;
+  width: 200px;
+  background-color: purple;
+}
+
+.bunny {
+  margin-right: 70px;
+  margin-left: 70px;
+  border: 1px solid blue;
+  max-height : 200px;
+  max-width: 200px;
+  padding: 0px;
+}

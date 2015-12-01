@@ -1,0 +1,11 @@
+# source where the gems will be downloaded from
+source "https://rubygems.org"
+# Pinning project to ruby version
+ruby "2.2.2"
+
+
+#specify which gems youre using
+gem 'sinatra'
+gem 'pry'
+gem 'babbler'
+
