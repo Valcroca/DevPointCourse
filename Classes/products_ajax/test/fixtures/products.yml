@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  base_price: 1.5
+  description: MyText
+  quantity_on_hand: 1
+  color: MyString
+  weight: 1.5
+  other_attributes: MyText
+
+two:
+  name: MyString
+  base_price: 1.5
+  description: MyText
+  quantity_on_hand: 1
+  color: MyString
+  weight: 1.5
+  other_attributes: MyText

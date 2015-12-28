@@ -1,0 +1,18 @@
+<h1>Products Home</h1>
+<hr />
+<% if @products.any? %>
+  <ul>
+    <% @products.each do |product| %>
+      <li>
+        <%= link_to "Product Name: - #{product.name}", product_path(product) %>
+        <%= button_to 'Edit product', edit_product_path(product), method: :get %>
+        <%= button_to 'Delete', product_path(product), method: :delete, data: {confirm: 'Delete this product?'} %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <h3>No products to show</h3>
+<% end %>
+<hr />
+<%= link_to 'New product', new_product_path, id: 'add_product_button' %>
+<div id='new_product_form'></div>

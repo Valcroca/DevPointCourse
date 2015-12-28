@@ -1,0 +1,25 @@
+<h1>Product Show</h1>
+
+<%= form_for @product do |f| %>
+  <%= f.label :name %>
+  <%= @product.name%>
+  <br />
+  <%= f.label :base_price %>
+  <%= @product.base_price %>
+  <br />
+  <%= f.label :description %>
+  <%= @product.description %>
+  <br />
+  <%= f.label :quantity_on_hand %>
+  <%= @product.quantity_on_hand %>
+  <br />
+  <%= f.label :color %>
+  <%= @product.color %>
+  <br />
+  <%= f.label :weight %>
+  <%= @product.weight %>
+  <br />
+  <%= f.label :other_attributes %>
+  <%= @product.other_attributes %>
+  <br />
+<% end %>

@@ -1,0 +1,17 @@
+<h1>Items</h1>
+<br />
+<% if @items.any? %>
+  <ul>
+    <% @items.each do |item| %>
+      <li>
+        <%= link_to "Item - #{item.name}", item_path(item) %>
+        <%= button_to 'Edit Item', edit_item_path(item), method: :get %> 
+        <%= button_to 'Delete', item_path(item), method: :delete, data: {confirm: 'Really delete this item?'} %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <h3>No items to show</h3>
+<% end %>
+<hr />
+<%= link_to 'New Item', new_item_path %>

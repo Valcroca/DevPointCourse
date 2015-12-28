@@ -1,0 +1,25 @@
+<%= form_for @product do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true %>
+  <br />
+  <%= f.label :base_price %>
+  <%= f.text_field :base_price %>
+  <br />
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <br />
+  <%= f.label :quantity_on_hand %>
+  <%= f.text_field :quantity_on_hand %>
+  <br />
+  <%= f.label :color %>
+  <%= f.text_field :color %>
+  <br />
+  <%= f.label :weight %>
+  <%= f.text_field :weight %>
+  <br />
+  <%= f.label :other_attributes %>
+  <%= f.text_field :other_attributes %>
+  <br />
+  <%= f.submit %>
+<% end %>
+
