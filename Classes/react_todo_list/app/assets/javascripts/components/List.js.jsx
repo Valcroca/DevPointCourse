@@ -12,8 +12,9 @@ var List = React.createClass({
     $.ajax({
       url: '/items',
       type: 'GET',
+      data: {list_id: this.props.id},
       success: function(data) {
-        self.setState({items: data});
+        self.setState({items: data.items});
       }
     });
   },
@@ -45,10 +46,10 @@ var List = React.createClass({
     $.ajax({
       url: '/items',
       type: 'POST',
-      data: {item: {name: this.state.itemName}},
-      success: function(item) {
+      data: {list_id: this.props.id, item: {name: this.state.itemName}},
+      success: function(data) {
         var items = self.state.items;
-        items.push(item);
+        items.push(data);
         self.setState({items: items, showAdd: false, itemName: null});
       }
     });
@@ -59,7 +60,7 @@ var List = React.createClass({
     for(var i = 0; i < this.state.items.length; i++){
       var item = this.state.items[i];
       var key = "Item-" + item.id;
-      items.push(<Item refreshList={this.refreshList} key={key} id={item.id} name={item.name} complete={item.complete} />);
+      items.push(<Item listId={this.props.id} refreshList={this.refreshList} key={key} url={item.url} id={item.id} name={item.name} complete={item.complete} />);
     }
     return items;
   },
@@ -70,7 +71,7 @@ var List = React.createClass({
             {this.addItemForm()}
             <div className='card blue-grey darken-1'>
               <div className='card-content white-text'>
-                <span className='card.title'>To Do </span>  
+                <span className='card.title'>{this.props.name}</span>  
                 <ul>{this.displayItems()}</ul>
               </div>
             </div>
