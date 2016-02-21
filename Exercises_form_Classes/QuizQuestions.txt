@@ -1,0 +1,96 @@
+1) PROBLEM: Find greatest value in array without sort without max or anyother helpers
+input: [90, 30, 32, 1000, 399, 1329,39, 1]
+
+SOLUTION:
+number_array = [90, 30, 32, 1000, 399, 1329,39, 1]
+max_value = number_array.first
+number_array.each do |number|
+  max_value = number unless max_value > number
+end
+puts max_value
+
+
+2) PROBLEM: Append users first name to an unordered list using jquery and ajax (can be done in raw js or coffeescript)
+
+endpoint: GET /users
+example response: [{first_name: 'Jake', last_name: 'Sorce'}, {first_name: 'Test', last_name: 'User'}]
+example HTML: <ul id="users_list"></ul>
+
+SOLUTION:
+
+Raw JS:
+var $usersList = $('#users_list');
+$.ajax({
+  url: '/users',
+  type: 'GET',
+  dataType: 'JSON',
+  success: function(data) {
+    for(var i = 0; i < data.length; i++) {
+      var user = data[i];
+      $usersList.append('<li>' + user.first_name + '</li>');
+    }
+  },
+  error: function(data) {
+    console.log(data);
+  }
+});
+
+
+CoffeeScript:
+  $usersList = $('#users_list')
+  $.ajax
+    url: '/users'
+    type: 'GET'
+    dataType: 'JSON'
+    success: (data) ->
+      for(i = 0; i < data.length; i++)
+        user = data[i]
+        $usersList.append("<li>#{user.first_name}</li>")
+    error: (data) ->
+      console.log(data)
+
+
+3) describe what HTTP verbs are and what are the main 4
+VERBS:
+GET, PUT, POST, DELETE
+
+CRUD:
+Create = POST 
+Read = GET
+Update = PUT
+Destroy = DELETE
+
+4) what is MVC?
+
+Describe what each Letter stands for and what is does
+
+M - Model
+V - View
+C - Controller
+
+Model - Mimics A Table In Our Database
+      - Makes it easier for us to query our database with ActiveRecord
+
+View - HTML Display Of A Template
+
+Controller -
+  1) A request comes into our server
+  2) Our server tries to match a route in our route table
+  3) Route Matched: Controller with a action takes over
+  4) Controller: Usually interacts with a model, renders a template
+  5) View
+V C M V
+
+PROBLEM: Reverse a string
+
+SOLUTION:
+
+normal_string = "Jake Sorce"
+
+reversed_string = ""
+
+(normal_string.length - 1).downto(1).each do |number|
+  reversed_string << normal_string[number]
+end
+
+puts reversed_string

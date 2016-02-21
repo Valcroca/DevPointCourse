@@ -1,0 +1,16 @@
+%h1 
+  = @zoo.name
+%ul
+  %li
+    Bears: #{@zoo.bears.count}
+  %li
+    Lions: #{@zoo.lions.count}
+  %li
+    Elephants: #{@zoo.elephants.count}
+  %li
+    Monkeys: #{@zoo.monkeys.count}
+  %li
+    All Animals: #{@zoo.animals.count}
+= link_to 'Show animals', sti_animal_path(@zoo)
+= link_to 'All Zoos', zoos_path
+

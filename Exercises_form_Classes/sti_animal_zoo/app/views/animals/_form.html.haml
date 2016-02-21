@@ -1,0 +1,16 @@
+= form_for [@zoo, @animal] do |f|
+  .field
+    = f.label :name
+    %br
+    = f.text_field :name, required: true, placeholder: 'Name'
+  .field
+    = f.label :race
+    %br
+    = f.select :race, Animal.races
+  .field
+    = f.label :age
+    %br
+    = f.text_field :age, placeholder: 'Age'
+  .actions
+    = f.submit
+= link_to 'Back', sti_animal_path(@zoo)

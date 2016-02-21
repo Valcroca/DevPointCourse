@@ -1,0 +1,70 @@
+@import 'theme';
+@import 'grid';
+
+.big-button {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  background: @mainColor;
+  margin: 30px;
+}
+
+.YellowBorder {border-color: #fff000;}
+.BigBorder {border-width: 10px;}
+.SolidBorder {border-style: solid;}
+.DashedBorder {border-style: dashed;}
+
+#button1 {
+  .YellowBorder;
+  .DashedBorder;
+  .RoundedCorners;
+  background-color: @mainColor - #222;
+}
+
+#button2 {
+  .YellowBorder;
+  .DashedBorder;
+  .BigBorder;
+  .RoundedCorners(25px);
+  background-color: @mainColor + #222;
+}
+
+#button3 {
+  border-color: @borderColor;
+  .SolidBorder;
+  .RoundedCorners(200px);
+}
+
+.RoundedCorners(@radius: 0) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+aside {
+  .Col(1);
+  min-height: 500 * @toRem;
+  background-color: #eee;
+  h1 {
+    color: @mainColor;
+    &:hover {
+      background-color: @defaultThemeColor;
+    }
+  }
+}
+
+article {
+  .Col(3);
+  min-height: 500 * @toRem;
+  background-color: #ddd;
+}
+
+header, main, footer {
+  .Row;
+  background-color: #ccc;
+  min-height: 200 * @toRem;
+}
+
+
+
+

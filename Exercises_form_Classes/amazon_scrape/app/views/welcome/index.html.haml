@@ -1,0 +1,11 @@
+%h1 Cellohones from amazon
+%hr
+- @cellphones.each do |cellphone|
+  .cellphone
+    %h2
+      = cellphone.name
+    %img{src: cellphone.img_src}
+    %i
+      = cellphone.stars
+    %b
+      = cellphone.price

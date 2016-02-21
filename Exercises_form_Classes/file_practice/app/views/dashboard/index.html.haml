@@ -1,0 +1,18 @@
+%h2.text-center File Practice
+%hr
+.col-md-10.col-md-offset-1
+  = form_for :file, url: write_file_path do |f|
+    .form-group
+      = f.label :filename, {class: 'control-label'}
+      = f.text_field :filename, {class: 'form-control'}
+    .form-group
+      = f.label :content, {class: 'control-label'}
+      = f.text_area :content, {class: 'form-control'}
+    = f.submit 'Create File', {class: 'btn btn-primary'}
+  %hr
+
+.col-md-10.col-md-offset-1
+  = form_for :file, url: read_file_path, action: 'read' do |f|
+    .form-group
+      = f.file_field :uploaded_file, {class: 'form-control'}
+    = f.submit 'Read File', {class: 'btn btn-primary'}

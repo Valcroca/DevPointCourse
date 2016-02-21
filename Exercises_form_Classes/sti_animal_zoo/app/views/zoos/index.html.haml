@@ -1,0 +1,11 @@
+%h1 Zoos
+- if @zoos.any?
+  %ul
+    - @zoos.each do |zoo|
+      %li
+        = link_to zoo.name, zoo_path(zoo)
+        = link_to 'Edit', edit_zoo_path(zoo) 
+        = link_to 'Delete', zoo_path(zoo), method: :delete
+- else
+  %h3 No zoos yet, please create one.
+= link_to 'New Zoo', new_zoo_path

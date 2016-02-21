@@ -1,0 +1,35 @@
+%h1 Viewing All #{@race.pluralize} In Zoo: #{@zoo.name}
+- if @animals.any?
+  %table
+    %thead
+      %tr
+        %th Name
+        %th Age
+        %th Race
+        %th 
+        %th 
+        %th 
+        %th 
+    %tbody
+      - @animals.each do |animal|
+        %tr 
+          %td
+            = animal.name
+          %td
+            = animal.age
+          %td
+            = animal.race
+          %td
+            = link_to 'Show', sti_animal_path(@zoo, animal.race, animal)
+          %td
+            = link_to 'Edit', sti_animal_path(@zoo, animal.race, animal, :edit)
+          %td
+            = link_to 'Delete', sti_animal_path(@zoo, animal.race, animal), method: :delete
+          %td
+            = link_to "See all #{animal.race.pluralize}", sti_animal_path(@zoo, animal.race)
+
+
+-else
+  %h3 No animals in the zoo, please create one
+= link_to "New #{@race}", sti_animal_path(@zoo, @race, nil, :new)
+= link_to "Back", zoo_path(@zoo)

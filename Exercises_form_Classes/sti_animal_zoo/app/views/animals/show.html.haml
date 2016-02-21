@@ -1,0 +1,8 @@
+%h1 
+  I am a #{@animal.race}
+%h2
+  My name is #{@animal.name} and I am #{@animal.age} tears old
+%h3
+  Hear me #{@animal.talk}
+%br
+= link_to 'Back', sti_animal_path(@zoo) 
